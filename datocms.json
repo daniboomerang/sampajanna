@@ -1,0 +1,11 @@
+{
+  "name": "Sampajañña",
+  "description": "Sampajañña is my personal blog. A place to express through words and drawings those ideas that might arise in the journey to deep diving into stillness.",
+  "previewImage": "https://www.datocms-assets.com/25003/1587129568-oefnerblackhole6byfabian-oefner600480.jpg",
+  "datocmsProjectId": "604",
+  "deploymentType": "static",
+  "buildCommand": "yarn build",
+  "datocmsApiTokenEnvName": "DATO_API_TOKEN",
+  "buildDirectory": "public",
+  "livePreviewUrl": "https://thirsty-allen-1ea1f9.netlify.app"
+}

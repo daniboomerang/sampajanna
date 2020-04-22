@@ -1,0 +1,25 @@
+.slideBtn {
+  transition: color .3s;
+  border-radius: 1rem;
+  height: 30px;
+  width: 57px;
+}
+
+.slideBtn:focus {
+  outline: 0;
+}
+
+.slideBtnKnob {
+  transition: left .3s;
+  height: 26px;
+  width: 26px;
+  top: 1px;
+}
+
+.slideBtnKnobDarkMode {
+  left: 1px;
+}
+
+.slideBtnKnobLightMode {
+  left: 28px;
+}
