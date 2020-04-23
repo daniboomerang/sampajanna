@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
   } = datoCmsHome;
 
   return (
-    <div className="bg-bg text-primary font-body text-2xl color-bg-transition ">
+    <div className="bg-primary text-primary font-body text-2xl color-bg-transition ">
       <HelmetDatoCms
         favicon={faviconMetaTags}
         seo={seoMetaTags}

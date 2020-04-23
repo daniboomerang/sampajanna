@@ -1,36 +1,63 @@
+const darkThemeColors = {
+  // Purple
+  purple: 'hsla(268, 31%, 12%, 1)',
+  darkpurple: 'hsla(270, 50%, 6%, 1)',
+  'darkpurple-trns': 'hsla(270, 50%, 6%, 0.8)',
+  'lightpurple-trns': 'hsla(267, 6%, 61%, 0.2)',
+
+  // Blue
+  turquoise: 'hsla(197, 81%, 66%, 1)',
+  'turquoise-trns': 'hsla(197, 81%, 66%, 0.75)',
+
+  // White
+  white: 'hsla(0, 100%, 100%, 1)',
+};
+
+const lightThemeColors = {
+  // Bianca
+  bianca: 'hsla(33, 60%, 97%, 1)',
+  darkbianca: 'hsla(33, 45%, 86%, 1)',
+  'darkbianca-trns': 'hsla(33, 45%, 86%, 0.8)',
+
+  // Cerise
+  cerisered: 'hsla(349, 69%, 53%, 1)',
+  'cerisered-trns': 'hsla(349, 69%, 53%, 0.75)',
+
+  // Black
+  black: 'hsla(0, 0%, 0%, 1)',
+};
+
 module.exports = {
   theme: {
+    colors: {
+      'white-trns': 'hsla(0, 100%, 100%, 0.8)',
+      'black-trns': 'hsla(0, 0%, 0%, 0.3)',
+      'codgrey-trns': 'hsla(0, 0%, 11%, 0.85)',
+      ...darkThemeColors,
+      ...lightThemeColors,
+    },
     backgroundColor: {
-      bg: 'var(--color-bg-bg)',
       primary: 'var(--color-bg-primary)',
-      secondary: 'var(--color-bg-secondary)',
       'almost-primary': 'var(--color-bg-almost-primary)',
+      secondary: 'var(--color-bg-secondary)',
       accent: 'var(--color-bg-accent)',
       'accent-soft': 'var(--color-bg-accent-soft)',
-      'accent-secondary': 'var(--color-bg-accent-secondary)',
-      'accent-secondary-soft': 'var(--color-bg-accent-secondary-soft)',
       'accent-light': 'var(--color-bg-accent-light)',
-      header: 'var(--color-bg-header)',
-      'nav-bar': 'var(--color-bg-nav-bar)',
+      'accent-dark': 'var(--color-bg-accent-dark)',
     },
     textColor: {
       primary: 'var(--color-text-primary)',
       secondary: 'var(--color-text-secondary)',
-      contrast: 'var(--color-text-contrast)',
-      black: 'var(--color-text-black)',
       accent: 'var(--color-text-accent)',
       'accent-soft': 'var(--color-text-accent-soft)',
-      'accent-secondary': 'var(--color-text-accent-secondary)',
-      'accent-secondary-soft': 'var(--color-text-accent-secondary-soft)',
     },
     fontFamily: {
       display: 'var(--font-display)',
       body: 'var(--font-body)',
     },
     borderColor: {
+      soft: 'var(--color-border-soft)',
       light: 'var(--color-border-light)',
-      medium: 'var(--color-border-medium)',
-      heavy: 'var(--color-border-heavy)',
       accent: 'var(--color-border-accent)',
     },
     extend: {
@@ -50,7 +77,7 @@ module.exports = {
       },
       boxShadow: {
         'accent-md': 'var(--shadow-accent-md)',
-        'accent-xl': 'var(--shadow-accent-xl)',
+        'accent-xl': 'var(--shadow-xl)',
       },
       scale: {
         102: '1.02',
@@ -63,15 +90,3 @@ module.exports = {
   variants: {},
   plugins: [],
 };
-
-
-// light: 'var(--color-bg-light)',
-// 'light-bar': 'var(--color-bg-light-bar)',
-// hover: 'var(--color-bg-hover)',
-// shadow: 'var(--color-bg-shadow)',
-// 'shadow-heavy': 'var(--color-bg-shadow-heavy)',
-// 'shadow-light': 'var(--color-bg-shadow-light)',
-// 'inline-code': 'var(--color-bg-inline-code)',
-// tab: 'var(--color-bg-tab)',
-// 'tab-accent': 'var(--color-bg-tab-accent)',
-// 'tab-hover': 'var(--color-bg-tab-hover)',

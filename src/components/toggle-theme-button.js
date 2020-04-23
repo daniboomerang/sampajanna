@@ -14,19 +14,19 @@ const ToggleThemeButton = ({ classNames, onToggle, isDarkMode }) => (
     >
       <Icon
         icon="sun"
-        color={isDarkMode ? getTextColors().accent : getTextColors().secondary}
+        color={isDarkMode ? getTextColors().accent : getTextColors().primary}
         colorHover={getTextColors().accent}
         className="p-1"
       />
     </button>
     <button
       type="button"
-      className={cn('mx-2 bg-primary text-secondary relative block border box-border', styles.slideBtn, { [isDarkMode]: isDarkMode })}
+      className={cn('mx-2 bg-accent-dark text-secondary relative block border box-border', styles.slideBtn, { [isDarkMode]: isDarkMode })}
       onClick={onToggle}
     >
       <span
         className={cn(
-          'absolute block bg-accent-light rounded-full border box-border',
+          'absolute block bg-accent-soft rounded-full border border-soft box-border',
           styles.slideBtnKnob,
           isDarkMode ? styles.slideBtnKnobDarkMode : styles.slideBtnKnobLightMode,
         )}
@@ -39,7 +39,7 @@ const ToggleThemeButton = ({ classNames, onToggle, isDarkMode }) => (
     >
       <Icon
         icon="moon"
-        color={!isDarkMode ? getTextColors().accent : getTextColors().secondary}
+        color={!isDarkMode ? getTextColors().accent : getTextColors().primary}
         colorHover={getTextColors().accent}
         className="p-1"
       />

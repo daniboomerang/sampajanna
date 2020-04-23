@@ -35,11 +35,11 @@ const PostBar = ({ postTitle }) => {
   return (
     <div
       ref={ref}
-      className={cn('border border-light z-10 top-0 w-100 py-4 duration-200 transition-colors',
+      className={cn('border-b border-light z-10 top-0 w-100 py-4 duration-200 transition-colors',
         {
           sticky: isSticky,
           'bg-almost-primary': isSticky,
-          'shadow-accent-xl': isSticky,
+          'shadow-xl': isSticky,
           'text-accent': isSticky,
         })}
       style={{ top: '-1px' }}
@@ -53,7 +53,7 @@ const PostBar = ({ postTitle }) => {
           >
             <Icon
               icon="home"
-              color={getTextColors().secondary}
+              color={getTextColors().primary}
               colorHover={getTextColors().accent}
               className="p-1"
             />

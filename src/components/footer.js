@@ -9,7 +9,7 @@ import Icon from './icon';
 const Footer = ({
   isDarkMode, onToggleTheme, copyright, siteName,
 }) => (
-  <footer className="bg-secondary p-6">
+  <footer className="bg-secondary p-6 border-t border-light">
     <Container>
       <div className="py-28 flex flex-col sm:flex-row items-center">
         <div className="flex-1 text-center md:text-left">
@@ -17,6 +17,9 @@ const Footer = ({
           <Link to="/about" className="ml-4 hover:text-accent-soft duration-200 transition-colors">
             About
           </Link>
+          <div className="leading-none text-sm text-accent-soft">
+            {copyright}
+          </div>
         </div>
         <div className="flex-1 mt-8 sm:mt-0 flex items-center justify-center md:justify-end">
           <div className="sm:mx-4">
@@ -31,9 +34,7 @@ const Footer = ({
           />
         </div>
       </div>
-      <div className="leading-none text-sm text-accent-soft">
-        {copyright}
-      </div>
+
     </Container>
   </footer>
 );

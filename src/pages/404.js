@@ -28,7 +28,7 @@ const NotFoundPage = () => {
 
   return (
     <div
-      className="grid bg-bg text-primary font-body text-2xl color-bg-transition min-h-full"
+      className="grid bg-primary text-primary font-body text-2xl color-bg-transition min-h-full"
       style={{ gridTemplateRows: 'auto min-content' }}
     >
       <main className="py-4">

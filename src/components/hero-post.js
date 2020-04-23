@@ -19,7 +19,7 @@ const HeroPost = ({
 
   return (
     <section onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <div className={cn('rounded-md rounded-light position-relative', { 'shadow-accent-xl': isHovered })}>
+      <div className={cn('rounded-md rounded-light position-relative', { 'shadow-xl': isHovered })}>
         <div className={cn('duration-200 transform', { 'scale-102': isHovered })}>
           <CoverImage
             title={title}
@@ -29,9 +29,9 @@ const HeroPost = ({
           />
         </div>
         <div className={cn('relative mb-48 duration-200 transform', { 'scale-105': isHovered })}>
-          <div className={cn('absolute border border-light text-center w-11/12 p-4 rounded m-auto -top-20 left-0 right-0 bg-accent-light text-secondary', { 'shadow-accent-md': isHovered })}>
+          <div className={cn('absolute border border-light text-center w-11/12 p-4 rounded m-auto -top-20 left-0 right-0 bg-accent-light', { 'shadow-accent-md': isHovered })}>
             <div className="text-4xl lg:text-5xl leading-tight mb-4 ">
-              <Link to={`/posts/${slug}`} className={cn('transition-colors duration-200 text-secondary', { 'text-accent': isHovered })}>{title}</Link>
+              <Link to={`/posts/${slug}`} className={cn('transition-colors duration-200', { 'text-accent': isHovered })}>{title}</Link>
             </div>
             <div className="mb-4 md:mb-2 text-base">
               <Tags tags={tags} />

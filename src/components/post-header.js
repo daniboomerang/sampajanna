@@ -4,7 +4,7 @@ import CoverImage from './cover-image';
 import Tags from './tags';
 
 const PostHeader = ({
-  title, coverImage, date, tags,
+  title, slug, coverImage, date, tags,
 }) => (
   <>
     <div className="mb-4 md:mb-8 max-w-3xl mx-auto">
@@ -12,6 +12,7 @@ const PostHeader = ({
         title={title}
         coverImage={coverImage}
         size="xl"
+        slug={slug}
       />
     </div>
     <div className="max-w-2xl mx-auto">
