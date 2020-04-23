@@ -19,10 +19,10 @@ const Posts = ({
 }) => {
   const {
     title,
+    slug,
     seoMetaTags,
     coverImage,
     date,
-    author,
     contentNode,
     tags,
   } = post;
@@ -38,9 +38,9 @@ const Posts = ({
           <div className="my-16">
             <PostHeader
               title={title}
+              slug={slug}
               coverImage={coverImage}
               date={date}
-              author={author}
               tags={tags}
             />
           </div>
