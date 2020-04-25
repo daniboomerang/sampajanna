@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import { HelmetDatoCms } from 'gatsby-source-datocms';
 import Layout from '../components/layout';
 import Container from '../components/container';
@@ -7,34 +7,14 @@ import Header from '../components/header';
 import PostBar from '../components/post-bar';
 import PostBody from '../components/post-body';
 
-const About = () => {
-  const data = useStaticQuery(graphql`
-    query AboutQuery {
-      datoCmsAboutPage(locale: {eq: "en"}) {
-        seoMetaTags {
-          ...GatsbyDatoCmsSeoMetaTags
-        }
-        title
-        subtitle
-        contentNode {
-          childMarkdownRemark {
-            html
-          }
-        }
-        coverImage {
-          url
-        }
-      }
-    }
-  `);
-
-  const { datoCmsAboutPage } = data;
+const About = ({ data }) => {
+  const { about } = data;
   const {
     seoMetaTags,
     title,
     contentNode,
     coverImage,
-  } = datoCmsAboutPage;
+  } = about;
 
   return (
     <Layout>
@@ -51,3 +31,23 @@ const About = () => {
 };
 
 export default About;
+
+export const query = graphql`
+  query AboutQuery($locale: String!) {
+    about: datoCmsAboutPage(locale: { eq: $locale }) {
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
+      title
+      subtitle
+      contentNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+      coverImage {
+        url
+      }
+    }
+  }
+`;
