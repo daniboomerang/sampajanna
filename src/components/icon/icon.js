@@ -5,7 +5,6 @@ import icons from './icons';
 import registry from './withIcon';
 import { getTextColors } from '../../lib/colorUtils';
 
-
 const Icon = ({
   icon, color, colorHover, className, ...rest
 }) => {

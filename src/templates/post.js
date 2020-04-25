@@ -1,6 +1,7 @@
 import React from 'react';
 import { HelmetDatoCms } from 'gatsby-source-datocms';
 import { graphql } from 'gatsby';
+import { FormattedMessage } from 'react-intl';
 import Layout from '../components/layout';
 import Container from '../components/container';
 import PostBody from '../components/post-body';
@@ -50,7 +51,7 @@ const Posts = ({
       <Container>
         <SectionSeparator />
         <div className="my-8 text-center text-5xl md:text-6xl lg:text-8xl font-bold tracking-tighter">
-          More stories
+          <FormattedMessage id="moreStories" />
         </div>
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Container>
@@ -61,13 +62,13 @@ const Posts = ({
 export default Posts;
 
 export const query = graphql`
-  query PostQuery($slug: String!) {
+  query PostQuery($slug: String!, $locale: String!) {
     datoCmsPostPage {
       coverImage {
         url
       }
     }
-    datoCmsPost(slug: {eq: $slug}, locale: {eq: "en"}) {
+    datoCmsPost(slug: {eq: $slug}, locale: {eq: $locale}) {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
@@ -90,7 +91,7 @@ export const query = graphql`
         name
       }
     }
-    allDatoCmsPost(limit: 2, filter: {slug: {ne: $slug}, locale: {eq: "en"}}) {
+    allDatoCmsPost(limit: 2, filter: {slug: {ne: $slug}, locale: {eq: $locale}}) {
       nodes {
         title
         slug

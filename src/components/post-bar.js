@@ -1,6 +1,6 @@
 import React, { createRef, useEffect, useState } from 'react';
-import { Link } from 'gatsby';
 import cn from 'classnames';
+import Link from './link';
 import Icon from './icon';
 import PostTitle from './post-title';
 import { getTextColors } from '../lib/colorUtils';

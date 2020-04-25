@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
-import { Link } from 'gatsby';
+import Link from './link';
 import Date from './date';
 import CoverImage from './cover-image';
 import Tags from './tags';

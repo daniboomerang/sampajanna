@@ -37,12 +37,12 @@ const Layout = ({ children }) => {
   } = datoCmsHome;
 
   return (
-    <div className="bg-primary text-primary font-body text-2xl color-bg-transition ">
+    <>
       <HelmetDatoCms
         favicon={faviconMetaTags}
         seo={seoMetaTags}
       />
-      <div className="min-h-full">
+      <div className="bg-primary text-primary font-body text-2xl color-bg-transition">
         <main className="py-4">
           {children}
         </main>
@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
           siteName={siteName}
         />
       </div>
-    </div>
+    </>
   );
 };
 

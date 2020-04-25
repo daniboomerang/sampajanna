@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
-import { Link } from 'gatsby';
+import Link from './link';
 
 const CoverImage = ({
   title, coverImage, slug, className, size,
