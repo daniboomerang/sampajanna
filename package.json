@@ -34,6 +34,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
+    "serve": "gatsby serve",
     "lint": "eslint src -c .eslintrc.json"
   },
   "devDependencies": {

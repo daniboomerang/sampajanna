@@ -5,10 +5,7 @@ const getIntlUrl = (to, locale) => {
   return `/${locale}${to}`;
 };
 
-const getToggleIntlUrl = (locale) => {
-  // eslint-disable-next-line no-undef
-  const { pathname } = window.location;
-
+const getToggleIntlUrl = (pathname, locale) => {
   if (locale === 'en') {
     return `/es/${pathname}`;
   }
