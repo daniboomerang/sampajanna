@@ -16,7 +16,7 @@ const PostHeader = ({
       />
     </div>
     <div className="max-w-2xl mx-auto">
-      <div className="flex justify-between items-center mb-6 text-lg">
+      <div className="block text-center sm:flex justify-between items-center mb-6 text-lg">
         <Tags tags={tags} />
         <Date dateString={date} />
       </div>

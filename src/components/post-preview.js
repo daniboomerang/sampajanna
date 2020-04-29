@@ -12,32 +12,42 @@ const PostPreview = ({
   excerpt,
   slug,
   tags,
+  isHero,
 }) => {
   const [isHovered, setHovered] = useState(false);
   const handleMouseEnter = () => setHovered(true);
   const handleMouseLeave = () => setHovered(false);
 
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={cn('max-w-screen-sm rounded-md rounded-light transition duration-200 ease-in-out transform hover:scale-102')}>
-      <CoverImage
-        slug={slug}
-        title={title}
-        coverImage={coverImage}
-        className={cn({ 'shadow-xl': isHovered })}
-      />
-      <div className="relative">
-        <div className={cn('-my-12 border border-light text-center w-11/12 p-2 rounded m-auto bg-accent-light', { 'shadow-xl': isHovered })}>
-          <div className="hover:text-accent text-shadow-xl text-2xl lg:text-4xl leading-tight mb-2 md:mb-4">
-            <Link to={`/posts/${slug}`} className={cn('transition-colors duration-200', { 'text-accent': isHovered })}>{title}</Link>
+    <section onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div className={cn('rounded-md rounded-light position-relative', { 'shadow-xl': isHovered })}>
+        <div className={cn('duration-200 transform', { 'scale-102': isHovered })}>
+          <CoverImage
+            title={title}
+            coverImage={coverImage}
+            slug={slug}
+            size={isHero ? 'xl' : 'default'}
+            className={cn({ 'shadow-xl': isHovered && isHero })}
+          />
+        </div>
+        <div className={cn('relative mb-20 duration-200 transform', { 'scale-105': isHovered })}>
+          <div className={cn('absolute border border-light text-center p-4 rounded m-auto -top-16 left-0 right-0 bg-accent-light duration-200 w-full sm:w-11.6/12 transform', { 'shadow-xl rounded-t-none': isHovered })}>
+            <div className={cn('mb-1 leading-tight', isHero ? 'text-4xl lg:text-5xl' : 'hover:text-accent text-shadow-xl text-2xl lg:text-4xl')}>
+              <Link to={`/posts/${slug}`} className={cn('transition-colors duration-200', { 'text-accent': isHovered })}>{title}</Link>
+            </div>
+            <div className="mb-2 md:mb-3 text-base">
+              <div className="mb-3 md:mb-1">
+                <Date dateString={date} />
+              </div>
+              <Tags tags={tags} />
+            </div>
+            <p className="text-lg leading-relaxed mb-4 break-words">
+              {excerpt}
+            </p>
           </div>
-          <div className="mb-2 md:mb-4 text-base">
-            <Tags tags={tags} />
-            <Date dateString={date} />
-          </div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

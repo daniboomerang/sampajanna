@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Header from '../components/header';
 import Container from '../components/container';
 import MoreStories from '../components/more-stories';
-import HeroPost from '../components/hero-post';
+import PostPreview from '../components/post-preview';
 import Layout from '../components/layout';
 import SectionSeparator from '../components/section-separator';
 
@@ -21,15 +21,18 @@ const Index = ({ data }) => {
       <Header image={homeCoverImage} />
       <Container>
         {heroPost && (
-          <HeroPost
-            title={title}
-            coverImage={coverImage}
-            date={date}
-            author={author}
-            slug={slug}
-            excerpt={excerpt}
-            tags={tags}
-          />
+          <div className="mb-48">
+            <PostPreview
+              title={title}
+              coverImage={coverImage}
+              date={date}
+              author={author}
+              slug={slug}
+              excerpt={excerpt}
+              tags={tags}
+              isHero
+            />
+          </div>
         )}
         <SectionSeparator />
         {morePosts.length > 0 && <MoreStories posts={morePosts} />}
