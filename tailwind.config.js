@@ -25,7 +25,6 @@ const lightThemeColors = {
 
   // Black
   black: 'hsla(0, 0%, 0%, 1)',
-
 };
 
 module.exports = {
@@ -75,18 +74,22 @@ module.exports = {
         '20px': '20px',
         '-12': '-3rem',
         12: '3rem',
-        '-20': '-5rem',
+        '-16': '-4rem',
         20: '5rem',
       },
       boxShadow: {
-        'accent-md': 'var(--shadow-accent-md)',
-        'accent-xl': 'var(--shadow-xl)',
+        md: 'var(--shadow-md)',
+        xl: 'var(--shadow-xl)',
       },
       scale: {
+        101: '1.01',
         102: '1.02',
       },
       height: {
         128: '32rem',
+      },
+      width: {
+        '11.6/12': '96.6%',
       },
     },
   },
