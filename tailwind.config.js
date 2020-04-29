@@ -25,6 +25,7 @@ const lightThemeColors = {
 
   // Black
   black: 'hsla(0, 0%, 0%, 1)',
+
 };
 
 module.exports = {
@@ -33,6 +34,7 @@ module.exports = {
       'white-trns': 'hsla(0, 100%, 100%, 0.8)',
       'black-trns': 'hsla(0, 0%, 0%, 0.3)',
       'codgrey-trns': 'hsla(0, 0%, 11%, 0.85)',
+      trns: 'hsla(0, 0%, 0%, 0.0)',
       ...darkThemeColors,
       ...lightThemeColors,
     },
