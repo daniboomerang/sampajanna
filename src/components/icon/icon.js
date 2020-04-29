@@ -6,7 +6,7 @@ import registry from './withIcon';
 import { getTextColors } from '../../lib/colorUtils';
 
 const Icon = ({
-  icon, color, colorHover, className, ...rest
+  icon, color, colorHover, strokeColor, strokeColorHover, className, ...rest
 }) => {
   const [isHovered, setHovered] = useState(false);
   const handleMouseEnter = () => setHovered(true);
@@ -24,6 +24,7 @@ const Icon = ({
       >
         <Component
           color={isHovered ? colorHover : color}
+          strokeColor={isHovered ? strokeColorHover : strokeColor}
           {...rest}
         />
       </div>
@@ -36,6 +37,8 @@ const Icon = ({
 Icon.defaultProps = {
   color: getTextColors.primary,
   colorHover: getTextColors.secondary,
+  strokeColor: getTextColors.primary,
+  strokeColorHover: getTextColors.secondary,
   className: '',
   iconWidth: 24,
   iconHeight: 24,
@@ -45,6 +48,8 @@ Icon.propTypes = {
   icon: PropTypes.string.isRequired,
   color: PropTypes.string,
   colorHover: PropTypes.string,
+  strokeColor: PropTypes.string,
+  strokeColorHover: PropTypes.string,
   className: PropTypes.string,
   iconWidth: PropTypes.number,
   iconHeight: PropTypes.number,

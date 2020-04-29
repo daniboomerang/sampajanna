@@ -59,6 +59,7 @@ module.exports = {
       soft: 'var(--color-border-soft)',
       light: 'var(--color-border-light)',
       accent: 'var(--color-border-accent)',
+      black: 'var(--color-border-black)',
     },
     extend: {
       fontSize: {

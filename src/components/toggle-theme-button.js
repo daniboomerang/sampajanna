@@ -26,7 +26,7 @@ const ToggleThemeButton = ({ classNames, onToggle, isDarkMode }) => (
     >
       <span
         className={cn(
-          'absolute block bg-accent-soft rounded-full border border-soft box-border',
+          'absolute block color-bg-transition bg-accent-soft hover:bg-accent rounded-full border border-soft box-border',
           styles.slideBtnKnob,
           isDarkMode ? styles.slideBtnKnobDarkMode : styles.slideBtnKnobLightMode,
         )}
