@@ -3,6 +3,7 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { Link as LinkGatsby } from 'gatsby';
 import { getToggleIntlUrl } from '../lib/intlUtils';
+import { getThemeColors } from '../lib/colorUtils';
 import Link from './link';
 import Container from './container';
 import ToggleThemeButton from './toggle-theme-button';
@@ -34,11 +35,15 @@ const Footer = ({
                 <div className="sm:mx-4">
                   <ToggleThemeButton onToggle={onToggleTheme} isDarkMode={isDarkMode} />
                 </div>
-                <LinkGatsby to={toggledIntlUrl(location.pathname)}>
+                <LinkGatsby to={toggledIntlUrl(location.pathname)} className="flex items-center">
                   <Icon
                     icon={locale === 'en' ? 'esFlag' : 'enFlag'}
-                    className="cursor-pointer rounded-full border hover:border-soft"
+                    className="cursor-pointer rounded-full border hover:border-black"
+                    color="rgba(255, 0, 0, 0.0)"
+                    strokeColor={isDarkMode ? getThemeColors().bianca : getThemeColors().black}
+                    strokeColorHover={isDarkMode ? getThemeColors().black : getThemeColors().black}
                   />
+                  <span className="uppercase text-base ml-1">{locale === 'en' ? 'es' : 'en'}</span>
                 </LinkGatsby>
               </div>
             </div>
