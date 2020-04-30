@@ -39,7 +39,7 @@ const PostBar = ({ postTitle }) => {
         {
           sticky: isSticky,
           'bg-almost-primary': isSticky,
-          'shadow-xl': isSticky,
+          'shadow-md': isSticky,
           'text-accent': isSticky,
         })}
       style={{ top: '-1px' }}
