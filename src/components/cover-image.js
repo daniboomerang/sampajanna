@@ -12,7 +12,7 @@ const CoverImage = ({
       fluid={coverImage.fluid}
       title={title}
       className={cn(
-        'rounded-md rounded-light border border-light overflow-hidden',
+        'rounded-md overflow-hidden',
         className,
         size === 'default' ? 'h-64' : 'h-128',
       )}
