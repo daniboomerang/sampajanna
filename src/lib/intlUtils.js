@@ -12,5 +12,4 @@ const getToggleIntlUrl = (pathname, locale) => {
   return pathname.substring(3);
 };
 
-
 export { getIntlUrl, getToggleIntlUrl };

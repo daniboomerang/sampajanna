@@ -35,22 +35,17 @@ const PostBar = ({ postTitle }) => {
   return (
     <div
       ref={ref}
-      className={cn('border-b border-light z-10 top-0 w-100 py-4 duration-200 transition-colors',
-        {
-          sticky: isSticky,
-          'bg-almost-primary': isSticky,
-          'shadow-md': isSticky,
-          'text-accent': isSticky,
-        })}
+      className={cn('border-b border-light z-10 top-0 w-100 py-4 duration-200 transition-colors', {
+        sticky: isSticky,
+        'bg-almost-primary': isSticky,
+        'shadow-md': isSticky,
+        'text-accent': isSticky,
+      })}
       style={{ top: '-1px' }}
     >
       <div className="max-w-screen-lg mx-auto px-8 md:px-16">
         <div className="relative flex justify-center items-center">
-          <Link
-            to="/"
-            type="button"
-            className="absolute left-0"
-          >
+          <Link to="/" type="button" className="absolute left-0">
             <Icon
               icon="home"
               color={getTextColors().primary}

@@ -10,9 +10,7 @@ import ToggleThemeButton from './toggle-theme-button';
 import Icon from './icon';
 import { ElementContext } from '../context/PageElementContext';
 
-const Footer = ({
-  isDarkMode, onToggleTheme, copyright, siteName,
-}) => {
+const Footer = ({ isDarkMode, onToggleTheme, copyright, siteName }) => {
   const { locale } = useIntl();
   const toggledIntlUrl = (currentPath) => getToggleIntlUrl(currentPath, locale);
 
@@ -23,8 +21,13 @@ const Footer = ({
           <Container>
             <div className="py-28 grid grid-cols-1 row-gap-4 sm:grid-cols-2 sm:row-gap-1 items-center justify-between">
               <div className="flex justify-between sm:justify-start">
-                <Link to="/" className="mr-4 hover:text-accent-soft">{siteName}</Link>
-                <Link to="/about" className="ml-4 hover:text-accent-soft duration-200 transition-colors">
+                <Link to="/" className="mr-4 hover:text-accent-soft">
+                  {siteName}
+                </Link>
+                <Link
+                  to="/about"
+                  className="ml-4 hover:text-accent-soft duration-200 transition-colors"
+                >
                   <FormattedMessage id="about" />
                 </Link>
               </div>
@@ -51,7 +54,6 @@ const Footer = ({
         </footer>
       )}
     </ElementContext.Consumer>
-
   );
 };
 

@@ -8,13 +8,14 @@ import Layout from '../components/layout';
 import SectionSeparator from '../components/section-separator';
 
 const Index = ({ data }) => {
-  const { posts: { nodes: posts }, home: { coverImage: homeCoverImage } } = data;
+  const {
+    posts: { nodes: posts },
+    home: { coverImage: homeCoverImage },
+  } = data;
 
   const heroPost = posts[0];
   const morePosts = posts.slice(1);
-  const {
-    title, coverImage, date, slug, excerpt, tags, author,
-  } = heroPost;
+  const { title, coverImage, date, slug, excerpt, tags, author } = heroPost;
 
   return (
     <Layout>
@@ -64,7 +65,7 @@ export const query = graphql`
             ...GatsbyDatoCmsSizes
           }
         }
-        date,
+        date
         tags {
           name
         }

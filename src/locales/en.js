@@ -5,8 +5,8 @@ const messages = defineMessages({
   'notFoundPage.description': 'You just hit a route that does not exist... the sadness!',
   about: 'About',
   moreStories: 'More stories',
-  lang_es: 'ESP',
-  lang_en: 'ENG',
+  langEs: 'ESP',
+  langEn: 'ENG',
 });
 
 export default messages;

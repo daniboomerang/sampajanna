@@ -7,8 +7,12 @@ const NotFoundPage = () => (
   <Layout>
     <Container>
       <div className="text-center">
-        <div className="text-4xl"><FormattedMessage id="notFoundPage.head" /></div>
-        <p><FormattedMessage id="notFoundPage.description" /></p>
+        <div className="text-4xl">
+          <FormattedMessage id="notFoundPage.head" />
+        </div>
+        <p>
+          <FormattedMessage id="notFoundPage.description" />
+        </p>
       </div>
     </Container>
   </Layout>

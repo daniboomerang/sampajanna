@@ -18,15 +18,7 @@ const Posts = ({
     datoCmsPostPage: { coverImage: postCoverImage },
   },
 }) => {
-  const {
-    title,
-    slug,
-    seoMetaTags,
-    coverImage,
-    date,
-    contentNode,
-    tags,
-  } = post;
+  const { title, slug, seoMetaTags, coverImage, date, contentNode, tags } = post;
   const morePosts = morePostNodes.nodes;
 
   return (
@@ -37,13 +29,7 @@ const Posts = ({
         <PostBar postTitle={title} />
         <Container>
           <div className="my-16">
-            <PostHeader
-              title={title}
-              slug={slug}
-              coverImage={coverImage}
-              date={date}
-              tags={tags}
-            />
+            <PostHeader title={title} slug={slug} coverImage={coverImage} date={date} tags={tags} />
           </div>
           <PostBody contentNode={contentNode} />
         </Container>
@@ -68,7 +54,7 @@ export const query = graphql`
         url
       }
     }
-    datoCmsPost(slug: {eq: $slug}, locale: {eq: $locale}) {
+    datoCmsPost(slug: { eq: $slug }, locale: { eq: $locale }) {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
@@ -91,7 +77,7 @@ export const query = graphql`
         name
       }
     }
-    allDatoCmsPost(limit: 2, filter: {slug: {ne: $slug}, locale: {eq: $locale}}) {
+    allDatoCmsPost(limit: 2, filter: { slug: { ne: $slug }, locale: { eq: $locale } }) {
       nodes {
         title
         slug

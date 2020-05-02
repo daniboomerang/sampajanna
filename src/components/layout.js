@@ -30,22 +30,22 @@ const Layout = ({ children }) => {
   const darkMode = useDarkMode(true);
   const { value: isDarkMode, toggle: toggleTheme } = darkMode;
 
-  const { datoCmsSite, datoCmsHome, datoCmsFooter: { copyright } } = data;
-  const { faviconMetaTags, globalSeo: { siteName } } = datoCmsSite;
   const {
-    seoMetaTags,
-  } = datoCmsHome;
+    datoCmsSite,
+    datoCmsHome,
+    datoCmsFooter: { copyright },
+  } = data;
+  const {
+    faviconMetaTags,
+    globalSeo: { siteName },
+  } = datoCmsSite;
+  const { seoMetaTags } = datoCmsHome;
 
   return (
     <>
-      <HelmetDatoCms
-        favicon={faviconMetaTags}
-        seo={seoMetaTags}
-      />
+      <HelmetDatoCms favicon={faviconMetaTags} seo={seoMetaTags} />
       <div className="bg-primary text-primary font-body text-2xl color-bg-transition">
-        <main className="py-4">
-          {children}
-        </main>
+        <main className="py-4">{children}</main>
         <Footer
           isDarkMode={isDarkMode}
           onToggleTheme={toggleTheme}

@@ -21,14 +21,18 @@ const ToggleThemeButton = ({ classNames, onToggle, isDarkMode }) => (
     </button>
     <button
       type="button"
-      className={cn('mx-2 bg-accent-dark text-secondary relative block border box-border', styles.slideBtn, { [isDarkMode]: isDarkMode })}
+      className={cn(
+        'mx-2 bg-accent-dark text-secondary relative block border box-border',
+        styles.slideBtn,
+        { [isDarkMode]: isDarkMode }
+      )}
       onClick={onToggle}
     >
       <span
         className={cn(
           'absolute block color-bg-transition bg-accent-soft hover:bg-accent rounded-full border border-soft box-border',
           styles.slideBtnKnob,
-          isDarkMode ? styles.slideBtnKnobDarkMode : styles.slideBtnKnobLightMode,
+          isDarkMode ? styles.slideBtnKnobDarkMode : styles.slideBtnKnobLightMode
         )}
       />
     </button>

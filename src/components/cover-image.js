@@ -4,30 +4,18 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import Link from './link';
 
-const CoverImage = ({
-  title, coverImage, slug, className, size,
-}) => {
+const CoverImage = ({ title, coverImage, slug, className, size }) => {
   const image = (
     <Img
       fluid={coverImage.fluid}
       title={title}
-      className={cn(
-        'rounded-md overflow-hidden',
-        className,
-        size === 'default' ? 'h-64' : 'h-128',
-      )}
+      className={cn('rounded-md overflow-hidden', className, size === 'default' ? 'h-64' : 'h-128')}
     />
   );
 
   return (
     <div className={cn('sm:mx-0 text-0px')}>
-      {slug ? (
-        <Link to={`/posts/${slug}`}>
-          {image}
-        </Link>
-      ) : (
-        image
-      )}
+      {slug ? <Link to={`/posts/${slug}`}>{image}</Link> : image}
     </div>
   );
 };
