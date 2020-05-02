@@ -9,12 +9,7 @@ import PostBody from '../components/post-body';
 
 const About = ({ data }) => {
   const { about } = data;
-  const {
-    seoMetaTags,
-    title,
-    contentNode,
-    coverImage,
-  } = about;
+  const { seoMetaTags, title, contentNode, coverImage } = about;
 
   return (
     <Layout>

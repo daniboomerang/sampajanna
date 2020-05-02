@@ -1,14 +1,29 @@
 import React from 'react';
 import { withIcon } from '../withIcon';
 
-const EnFlag = ({
-  color, strokeColor, height, width,
-}) => (
+const EnFlag = ({ color, strokeColor, height, width }) => (
   <svg width={width} height={height} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <circle strokeWidth="10px" stroke={strokeColor || '#000'} fill={color || 'rgb(255,255,255,0.8)'} cx="256" cy="256" r="256" />
+    <circle
+      strokeWidth="10px"
+      stroke={strokeColor || '#000'}
+      fill={color || 'rgb(255,255,255,0.8)'}
+      cx="256"
+      cy="256"
+      r="256"
+    />
     <g>
-      <path strokeWidth="10px" stroke={strokeColor || '#000'} fill={color || '#0052B4'} d="M52.92,100.142c-20.109,26.163-35.272,56.318-44.101,89.077h133.178L52.92,100.142z" />
-      <path strokeWidth="10px" stroke={strokeColor || '#000'} fill={color || '#0052B4'} d="M503.181,189.219c-8.829-32.758-23.993-62.913-44.101-89.076l-89.075,89.076H503.181z" />
+      <path
+        strokeWidth="10px"
+        stroke={strokeColor || '#000'}
+        fill={color || '#0052B4'}
+        d="M52.92,100.142c-20.109,26.163-35.272,56.318-44.101,89.077h133.178L52.92,100.142z"
+      />
+      <path
+        strokeWidth="10px"
+        stroke={strokeColor || '#000'}
+        fill={color || '#0052B4'}
+        d="M503.181,189.219c-8.829-32.758-23.993-62.913-44.101-89.076l-89.075,89.076H503.181z"
+      />
       <path
         strokeWidth="10px"
         stroke={strokeColor || '#000'}
@@ -16,11 +31,36 @@ const EnFlag = ({
         d="M8.819,322.784c8.83,32.758,23.993,62.913,44.101,89.075l89.074-89.075L8.819,322.784L8.819,322.784
           z"
       />
-      <path strokeWidth="10px" stroke={strokeColor || '#000'} fill={color || '#0052B4'} d="M411.858,52.921c-26.163-20.109-56.317-35.272-89.076-44.102v133.177L411.858,52.921z" />
-      <path strokeWidth="10px" stroke={strokeColor || '#000'} fill={color || '#0052B4'} d="M100.142,459.079c26.163,20.109,56.318,35.272,89.076,44.102V370.005L100.142,459.079z" />
-      <path strokeWidth="10px" stroke={strokeColor || '#000'} fill={color || '#0052B4'} d="M189.217,8.819c-32.758,8.83-62.913,23.993-89.075,44.101l89.075,89.075V8.819z" />
-      <path strokeWidth="10px" stroke={strokeColor || '#000'} fill={color || '#0052B4'} d="M322.783,503.181c32.758-8.83,62.913-23.993,89.075-44.101l-89.075-89.075V503.181z" />
-      <path strokeWidth="10px" stroke={strokeColor || '#000'} fill={color || '#0052B4'} d="M370.005,322.784l89.075,89.076c20.108-26.162,35.272-56.318,44.101-89.076H370.005z" />
+      <path
+        strokeWidth="10px"
+        stroke={strokeColor || '#000'}
+        fill={color || '#0052B4'}
+        d="M411.858,52.921c-26.163-20.109-56.317-35.272-89.076-44.102v133.177L411.858,52.921z"
+      />
+      <path
+        strokeWidth="10px"
+        stroke={strokeColor || '#000'}
+        fill={color || '#0052B4'}
+        d="M100.142,459.079c26.163,20.109,56.318,35.272,89.076,44.102V370.005L100.142,459.079z"
+      />
+      <path
+        strokeWidth="10px"
+        stroke={strokeColor || '#000'}
+        fill={color || '#0052B4'}
+        d="M189.217,8.819c-32.758,8.83-62.913,23.993-89.075,44.101l89.075,89.075V8.819z"
+      />
+      <path
+        strokeWidth="10px"
+        stroke={strokeColor || '#000'}
+        fill={color || '#0052B4'}
+        d="M322.783,503.181c32.758-8.83,62.913-23.993,89.075-44.101l-89.075-89.075V503.181z"
+      />
+      <path
+        strokeWidth="10px"
+        stroke={strokeColor || '#000'}
+        fill={color || '#0052B4'}
+        d="M370.005,322.784l89.075,89.076c20.108-26.162,35.272-56.318,44.101-89.076H370.005z"
+      />
     </g>
     <g>
       <path

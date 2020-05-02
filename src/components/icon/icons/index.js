@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import ArrowLeft from './arrowLeft';
 import ArrowLeftLarge from './arrowLeftLarge';
 import EnFlag from './enFlag';

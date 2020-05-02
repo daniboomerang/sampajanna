@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import icons from './icons';
 import registry from './withIcon';
 import { getTextColors } from '../../lib/colorUtils';
 
-const Icon = ({
-  icon, color, colorHover, strokeColor, strokeColorHover, className, ...rest
-}) => {
+const Icon = ({ icon, color, colorHover, strokeColor, strokeColorHover, className, ...rest }) => {
   const [isHovered, setHovered] = useState(false);
   const handleMouseEnter = () => setHovered(true);
   const handleMouseLeave = () => setHovered(false);
@@ -17,11 +15,7 @@ const Icon = ({
     const Component = registry[icon];
 
     return (
-      <div
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        className={className}
-      >
+      <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={className}>
         <Component
           color={isHovered ? colorHover : color}
           strokeColor={isHovered ? strokeColorHover : strokeColor}

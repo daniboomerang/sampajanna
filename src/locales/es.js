@@ -5,8 +5,8 @@ const messages = defineMessages({
   'notFoundPage.description': 'Esta pagina no existe... Que pena!',
   about: 'Sobre',
   moreStories: 'Mas historias',
-  lang_es: 'ESP',
-  lang_en: 'ENG',
+  langEs: 'ESP',
+  langEn: 'ENG',
 });
 
 export default messages;

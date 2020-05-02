@@ -2,9 +2,10 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: 'Creative Portfolio',
+    title: 'A blog about the mind',
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-remark',
     'gatsby-plugin-postcss',

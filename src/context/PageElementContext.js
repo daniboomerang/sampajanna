@@ -9,16 +9,22 @@ const messages = {
   en: enMessages,
 };
 
-const PageElementContext = ({ children, location }) => (
-  <ElementContext.Provider value={{ location }}>
-    {children}
-  </ElementContext.Provider>
+const ContextProvider = ({ children, location }) => (
+  <ElementContext.Provider value={{ location }}>{children}</ElementContext.Provider>
 );
 
-export default ({ element, props: { pageContext: { locale }, location } }) => (
-  <PageElementContext location={location}>
+const PageElementContext = ({
+  element,
+  props: {
+    pageContext: { locale },
+    location,
+  },
+}) => (
+  <ContextProvider location={location}>
     <IntlProvider locale={locale} messages={messages[locale]}>
       {element}
     </IntlProvider>
-  </PageElementContext>
+  </ContextProvider>
 );
+
+export default PageElementContext;

@@ -29,7 +29,8 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 
   await Promise.all(
-    locales.map((locale) => graphql(`
+    locales.map((locale) =>
+      graphql(`
         {
           posts: allDatoCmsPost(filter: {locale: { eq: "${locale}" } }) {
             edges {
@@ -42,20 +43,23 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       `).then((result) => {
-      result.data.posts.edges.forEach((item) => {
-        const prefix = locale === 'en' ? '' : `/${locale}`;
-        const { node: { slug } } = item;
-        const postPath = `${prefix}/posts/${slug}`;
+        result.data.posts.edges.forEach((item) => {
+          const prefix = locale === 'en' ? '' : `/${locale}`;
+          const {
+            node: { slug },
+          } = item;
+          const postPath = `${prefix}/posts/${slug}`;
 
-        createPage({
-          path: postPath,
-          component: path.resolve('./src/templates/post.js'),
-          context: {
-            slug,
-            locale,
-          },
+          createPage({
+            path: postPath,
+            component: path.resolve('./src/templates/post.js'),
+            context: {
+              slug,
+              locale,
+            },
+          });
         });
-      });
-    })),
+      })
+    )
   );
 };
