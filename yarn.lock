@@ -1422,6 +1422,13 @@
   dependencies:
     vfile-message "*"
 
+"@types/vfile@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/vfile/-/vfile-4.0.0.tgz#c32d13cbda319bc9f4ab3cacc0263b4ba1dd1ea3"
+  integrity sha512-eleP0/Cz8uVWxARDLi3Axq2+fDdN4ibAXoC6Pv8p6s7znXaUL7XvhgeIhjCiNMnvlLNP+tmCLd+RuCryGgmtEg==
+  dependencies:
+    vfile "*"
+
 "@types/vfile@^3.0.0":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@types/vfile/-/vfile-3.0.2.tgz#19c18cd232df11ce6fa6ad80259bc86c366b09b9"
@@ -1430,13 +1437,6 @@
     "@types/node" "*"
     "@types/unist" "*"
     "@types/vfile-message" "*"
-
-"@types/vfile@^4.1.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@types/vfile/-/vfile-4.0.0.tgz#c32d13cbda319bc9f4ab3cacc0263b4ba1dd1ea3"
-  integrity sha512-eleP0/Cz8uVWxARDLi3Axq2+fDdN4ibAXoC6Pv8p6s7znXaUL7XvhgeIhjCiNMnvlLNP+tmCLd+RuCryGgmtEg==
-  dependencies:
-    vfile "*"
 
 "@types/yargs-parser@*":
   version "15.0.0"
