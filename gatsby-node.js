@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -10,20 +11,20 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: `${prefix}/`,
-      component: path.resolve('./src/templates/index.js'),
+      component: path.resolve('./src/templates/index.tsx'),
       context: { locale },
     });
 
     createPage({
       path: `${prefix}/about`,
-      component: path.resolve('./src/templates/about.js'),
+      component: path.resolve('./src/templates/about.tsx'),
       context: { locale },
     });
 
     createPage({
       path: `${prefix}/404`,
       matchPath: `${prefix}/*`,
-      component: path.resolve('./src/templates/404Template.js'),
+      component: path.resolve('./src/templates/404Template.tsx'),
       context: { locale },
     });
   });
@@ -52,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
           createPage({
             path: postPath,
-            component: path.resolve('./src/templates/post.js'),
+            component: path.resolve('./src/templates/post.tsx'),
             context: {
               slug,
               locale,

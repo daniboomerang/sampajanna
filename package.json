@@ -36,12 +36,14 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "serve": "gatsby serve",
-    "lint": "eslint 'src/**/*.{js,tsx}' -c .eslintrc.json",
-    "format": "prettier --write src/**/*.{js,tsx}"
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' -c .eslintrc.json",
+    "format": "prettier --write src/**/*.{js, ts, tsx}",
+    "tsc": "tsc"
   },
   "devDependencies": {
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
+    "@types/vfile": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
     "eslint": "^6.8.0",
