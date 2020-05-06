@@ -29,6 +29,9 @@ interface Icon {
   height?: number;
   width?: number;
   className?: string;
+  styles?: {
+    [key: string]: string;
+  };
 }
 
 type ContentNode = {

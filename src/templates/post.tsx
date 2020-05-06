@@ -8,7 +8,6 @@ import PostBody from '../components/post-body';
 import PostHeader from '../components/post-header';
 import SectionSeparator from '../components/section-separator';
 import MoreStories from '../components/more-stories';
-import Header from '../components/header';
 import PostBar from '../components/post-bar';
 import { Image, Post } from '../types';
 
@@ -35,9 +34,8 @@ const Posts: FC<Props> = ({
   const morePosts = morePostNodes.nodes;
 
   return (
-    <Layout>
+    <Layout image={postCoverImage}>
       <HelmetDatoCms seo={seoMetaTags} />
-      <Header image={postCoverImage} />
       <article className="pt-4">
         <PostBar postTitle={title} />
         <Container>

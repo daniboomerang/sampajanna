@@ -70,9 +70,9 @@ module.exports = {
         '200px': '200px',
       },
       inset: {
-        0: 0,
-        '20px': '20px',
+        '40px': '40px',
         '-12': '-3rem',
+        4: '1rem',
         12: '3rem',
         '-16': '-4rem',
         20: '5rem',
@@ -86,6 +86,7 @@ module.exports = {
         102: '1.02',
       },
       height: {
+        half: '50%',
         128: '32rem',
       },
       width: {

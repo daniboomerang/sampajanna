@@ -20,6 +20,7 @@ const Icon: FC<Props<IconType>> = ({
   className = '',
   width = 24,
   height = 24,
+  styles,
 }) => {
   const [isHovered, setHovered] = useState(false);
   const handleMouseEnter = (): void => setHovered(true);
@@ -29,7 +30,12 @@ const Icon: FC<Props<IconType>> = ({
     const Component = registry[iconName];
 
     return (
-      <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={className}>
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className={className}
+        style={styles}
+      >
         <Component
           color={isHovered ? colorHover : color}
           strokeColor={isHovered ? strokeColorHover : strokeColor}

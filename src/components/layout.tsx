@@ -1,11 +1,16 @@
 import React, { FC } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import useDarkMode from 'use-dark-mode';
 import { HelmetDatoCms } from 'gatsby-source-datocms';
+import Header from '../components/header';
 import Footer from './footer';
+import { Image } from '../types';
 import '../styles/index.css';
 
-const Layout: FC = ({ children }) => {
+type Props = {
+  image?: Image;
+};
+
+const Layout: FC<Props> = ({ image, children }) => {
   const data = useStaticQuery(graphql`
     query LayoutQuery {
       datoCmsSite {
@@ -26,8 +31,6 @@ const Layout: FC = ({ children }) => {
       }
     }
   `);
-  const darkMode = useDarkMode(true);
-  const { value: isDarkMode, toggle: toggleTheme } = darkMode;
 
   const {
     datoCmsSite,
@@ -42,15 +45,17 @@ const Layout: FC = ({ children }) => {
 
   return (
     <>
-      <HelmetDatoCms favicon={faviconMetaTags} seo={seoMetaTags} />
-      <div className="bg-primary text-primary font-body text-2xl color-bg-transition">
-        <main className="py-4">{children}</main>
-        <Footer
-          isDarkMode={isDarkMode}
-          onToggleTheme={toggleTheme}
-          copyright={copyright}
-          siteName={siteName}
+      {image && (
+        <div
+          className="absolute bg-contain bg-no-repeat bg-left-top w-full h-full"
+          style={{ backgroundImage: `url(${image.url})` }}
         />
+      )}
+      <div className="text-primary font-body text-2xl color-bg-transition relative">
+        <HelmetDatoCms favicon={faviconMetaTags} seo={seoMetaTags} />
+        <Header />
+        <main className="py-4">{children}</main>
+        <Footer copyright={copyright} siteName={siteName} />
       </div>
     </>
   );
