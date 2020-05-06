@@ -3,7 +3,6 @@ import { graphql } from 'gatsby';
 import { HelmetDatoCms } from 'gatsby-source-datocms';
 import Layout from '../components/layout';
 import Container from '../components/container';
-import Header from '../components/header';
 import PostBar from '../components/post-bar';
 import PostBody from '../components/post-body';
 import { ContentNode, Image, SeoMetaTags } from '../types';
@@ -24,9 +23,8 @@ const About: FC<Props> = ({ data }) => {
   const { seoMetaTags, title, contentNode, coverImage } = about;
 
   return (
-    <Layout>
+    <Layout image={coverImage}>
       <HelmetDatoCms seo={seoMetaTags} />
-      <Header image={coverImage} />
       <article>
         <PostBar postTitle={title} />
         <Container>

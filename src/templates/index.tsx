@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { graphql } from 'gatsby';
-import Header from '../components/header';
 import Container from '../components/container';
 import MoreStories from '../components/more-stories';
 import PostPreview from '../components/post-preview';
@@ -30,8 +29,7 @@ const Index: FC<Props> = ({ data }) => {
   const { title, coverImage, date, slug, excerpt, tags } = heroPost;
 
   return (
-    <Layout>
-      <Header image={homeCoverImage} />
+    <Layout image={homeCoverImage}>
       <Container>
         {heroPost && (
           <div className="mb-48">
