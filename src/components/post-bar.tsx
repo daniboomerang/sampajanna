@@ -6,6 +6,9 @@ import Link from './link';
 import Icon from './icon';
 import PostTitle from './post-title';
 
+// Getting theme text colors
+const textColors = getTextColors();
+
 type Props = {
   postTitle: string;
 };
@@ -60,8 +63,8 @@ const PostBar: FC<Props> = ({ postTitle }) => {
           >
             <Icon
               iconName="home"
-              color={getTextColors().primary}
-              colorHover={getTextColors().accent}
+              color={textColors.primary}
+              colorHover={textColors.accent}
               className="p-1"
             />
           </Link>
@@ -75,8 +78,8 @@ const PostBar: FC<Props> = ({ postTitle }) => {
           >
             <Icon
               iconName={isDarkMode ? 'sun' : 'moon'}
-              color={getTextColors().primary}
-              colorHover={getTextColors().accent}
+              color={textColors.primary}
+              colorHover={textColors.accent}
               className="p-1"
             />
           </button>
