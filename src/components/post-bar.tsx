@@ -65,7 +65,7 @@ const PostBar: FC<Props> = ({ postTitle }) => {
               className="p-1"
             />
           </Link>
-          <PostTitle textSizeBig={!isSticky}>{postTitle}</PostTitle>
+          <PostTitle>{postTitle}</PostTitle>
           <button
             type="button"
             onClick={toggleTheme}
