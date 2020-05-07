@@ -5,6 +5,9 @@ import styles from './toggle-theme-button.module.css';
 import Icon from './icon';
 import { getTextColors } from '../lib/colorUtils';
 
+// Getting theme text colors
+const textColors = getTextColors();
+
 type Props = {
   onToggle: () => void;
   isDarkMode: boolean;
@@ -19,8 +22,8 @@ const ToggleThemeButton: FC<Props> = ({ onToggle, isDarkMode }) => (
     >
       <Icon
         iconName="sun"
-        color={isDarkMode ? getTextColors().accent : getTextColors().primary}
-        colorHover={getTextColors().accent}
+        color={isDarkMode ? textColors.accent : textColors.primary}
+        colorHover={textColors.accent}
         className="p-1"
       />
     </button>
@@ -47,8 +50,8 @@ const ToggleThemeButton: FC<Props> = ({ onToggle, isDarkMode }) => (
     >
       <Icon
         iconName="moon"
-        color={!isDarkMode ? getTextColors().accent : getTextColors().primary}
-        colorHover={getTextColors().accent}
+        color={!isDarkMode ? textColors.accent : textColors.primary}
+        colorHover={textColors.accent}
         className="p-1"
       />
     </button>

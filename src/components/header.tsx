@@ -8,6 +8,9 @@ import { getThemeColors } from '../lib/colorUtils';
 import { ElementContext } from '../context/PageElementContext';
 import Icon from './icon';
 
+// Getting theme colors
+const colors = getThemeColors();
+
 const Header: FC = () => {
   const { locale } = useIntl();
   const darkMode = useDarkMode(true);
@@ -30,10 +33,10 @@ const Header: FC = () => {
                 iconName={locale === 'en' ? 'esFlag' : 'enFlag'}
                 className="cursor-pointer rounded-full border hover:border-black"
                 styles={{ justifySelf: 'center' }}
-                color={getThemeColors().trns}
+                color={colors.trns}
                 colorHover={'original'}
-                strokeColor={isDarkMode ? getThemeColors().bianca : getThemeColors().black}
-                strokeColorHover={isDarkMode ? getThemeColors().black : getThemeColors().black}
+                strokeColor={isDarkMode ? colors.bianca : colors.black}
+                strokeColorHover={isDarkMode ? colors.black : colors.black}
               />
             </LinkGatsby>
           </div>

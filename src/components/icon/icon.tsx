@@ -4,8 +4,9 @@ import { getTextColors } from '../../lib/colorUtils';
 import { Icon as IconType } from '../../types';
 import { iconsLoader } from '../../lib/fnUtils';
 
-// Getting text colors from theme
+// Getting theme text colors
 const textColors = getTextColors();
+
 // Loading all icons to the registry
 iconsLoader();
 
